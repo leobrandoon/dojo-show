@@ -1,19 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img src="./assets/logo.png" alt width="300px" class="rounded-circle" id="avatar" />
+    <div class="container">
+      <h2>Registro Unico Pat-Pet</h2>
+
+      <div class="row">
+        <!-- <div class="col-md-6">
+          <Formulario />
+        </div> -->
+        <div>
+          <h3>Tus mascotas ingresadas</h3>
+          <Table />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import Formulario from "./components/Formulario.vue";
+import Table from "./components/Table.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    // Formulario,
+    Table,
+  },
+};
 </script>
 
 <style>
@@ -24,5 +38,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+#avatar {
+  margin-bottom: 5rem;
+}
+h2 {
+  margin-bottom: 4rem;
 }
 </style>
