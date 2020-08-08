@@ -7,9 +7,10 @@
 
     <!-- tabla de registros  -->
 
-    <div class>
+    <div>
       <table class="table col -md-6">
         <thead>
+          <router-link :to="{path:'/'}">Back</router-link>
           <tr>
             <th scope="col">Nombre</th>
             <th scope="col">Donde la veras</th>

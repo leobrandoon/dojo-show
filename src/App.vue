@@ -25,13 +25,12 @@
               href="#pills-profile"
               role="tab"
               aria-controls="pills-profile"
-              aria-selected="false"
+              aria-selected="true"
             >Lista de Pelis</a>
           </router-link>
         </li>
       </ul>
 
-      <div class="tab-content" id="pills-tabContent"></div>
       <router-view />
     </div>
   </div>

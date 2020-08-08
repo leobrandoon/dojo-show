@@ -5,6 +5,8 @@
 
     <table class="table col -md-6">
       <thead>
+    <router-link :to="{path:'/mispelis/'}">Back </router-link>
+    
         <tr>
           <th scope="col">Año</th>
           <th scope="col">Esta en cartelera</th>
