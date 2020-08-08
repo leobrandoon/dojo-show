@@ -1,10 +1,9 @@
 <template>
-  <div class="row">
-    <div>
-      <h1>Registra Paliculas por Ver</h1>
-      <img src="@/assets/logo.png" alt width="300px" class="rounded-circle" id="avatar" />
-    </div>
+  <div class="container">
     <form @submit.prevent="ingresar_pelicula" class="form col -md-6">
+      <h1>Registra Paliculas por Ver</h1>
+
+      <img src="@/assets/logo.png" alt width="100px" class="rounded-circle" id="avatar" />
       <div class="form-group">
         <label>Ingres la pelicula</label>
         <input type="text" required="requiered" class="form-control" v-model="name" />
