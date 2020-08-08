@@ -1,28 +1,45 @@
 <template>
   <div id="app">
-    <div>
-      <h1>Registro Paliculas por Ver</h1>
-      <img src="./assets/logo.png" alt width="300px" class="rounded-circle" id="avatar" />
-    </div>
-
     <div class="container">
-      <div>
-        <Table />
-      </div>
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <router-link to="/">
+            <a
+              class="nav-link active"
+              id="pills-home-tab"
+              data-toggle="pill"
+              href="#pills-home"
+              role="tab"
+              aria-controls="pills-home"
+              aria-selected="true"
+            >Ingreso Pelis</a>
+          </router-link>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <router-link to="mispelis">
+            <a
+              class="nav-link"
+              id="pills-profile-tab"
+              data-toggle="pill"
+              href="#pills-profile"
+              role="tab"
+              aria-controls="pills-profile"
+              aria-selected="false"
+            >Lista de Pelis</a>
+          </router-link>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="pills-tabContent"></div>
+      <router-view />
     </div>
   </div>
 </template>
 
 <script>
-// import Formulario from "./components/Formulario.vue";
-import Table from "./components/Table.vue";
-
 export default {
   name: "App",
-  components: {
-    // Formulario,
-    Table,
-  },
 };
 </script>
 
