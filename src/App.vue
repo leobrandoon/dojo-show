@@ -1,17 +1,13 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png" alt width="300px" class="rounded-circle" id="avatar" />
-    <div class="container">
-      <h2>Registro Unico Pat-Pet</h2>
+    <div>
+      <h1>Registro Paliculas por Ver</h1>
+      <img src="./assets/logo.png" alt width="300px" class="rounded-circle" id="avatar" />
+    </div>
 
-      <div class="row">
-        <!-- <div class="col-md-6">
-          <Formulario />
-        </div> -->
-        <div>
-          <h3>Tus mascotas ingresadas</h3>
-          <Table />
-        </div>
+    <div class="container">
+      <div>
+        <Table />
       </div>
     </div>
   </div>
