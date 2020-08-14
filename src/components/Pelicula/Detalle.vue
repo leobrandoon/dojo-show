@@ -5,8 +5,8 @@
 
     <table class="table col -md-6">
       <thead>
-    <router-link :to="{path:'/mispelis/'}">Back </router-link>
-    
+        <router-link :to="{path:'/mispelis/'}">Back</router-link>
+
         <tr>
           <th scope="col">Año</th>
           <th scope="col">Esta en cartelera</th>
@@ -36,11 +36,6 @@ import { db } from "@/firebase";
 export default {
   name: "Detalle",
 
-  firestore() {
-    return {
-      shows: db.collection("Show"),
-    };
-  },
   data() {
     return {
       name: "",
@@ -65,6 +60,7 @@ export default {
         this.genero = show.genero;
       });
   },
+
   props: {
     id: String,
   },

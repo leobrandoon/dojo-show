@@ -17,6 +17,8 @@
         </li>
 
         <li class="nav-item" role="presentation">
+
+          
           <router-link to="mispelis">
             <a
               class="nav-link"

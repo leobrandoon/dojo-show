@@ -15,6 +15,7 @@
             <th scope="col">Nombre</th>
             <th scope="col">Donde la veras</th>
             <th scope="col">Nuero de sagas</th>
+            <th scope="col">acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -24,6 +25,12 @@
             </td>
             <td>{{Show.network}}</td>
             <td>{{Show.numberSeasons}}</td>
+            <td>
+              <!-- aca reaccionamos al click sobre borrar, para crear f() que captura el id de la pelicula -->
+              <a href="#" @click.prevent="borrar_pelicula(Show.id)">
+                <img src="@/assets/delete.png" width="25px" />
+              </a>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -40,6 +47,16 @@ export default {
     return {
       shows: db.collection("Show"),
     };
+  },
+
+  methods: {
+    borrar_pelicula(id_pelicula) {
+      const respuesta = confirm("Quieres borrar la pelicula"); // aca preguntamos si esta seguro que quiere borrar
+      if (respuesta == false) {
+        return;
+      }
+      db.collection("Show").doc(id_pelicula).delete(); //aca borramos de la data show la pelicula de id
+    },
   },
 };
 </script>
