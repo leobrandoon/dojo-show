@@ -5,6 +5,7 @@ import Formulario from '@/components/Formulario.vue';  // asumiendo que hicimos 
 import Table from '@/components/Table.vue';  // asumiendo que hicimos este componente
 
 import Detalle from '@/components/Pelicula/Detalle.vue'
+import Edit  from '@/components/Pelicula/Edit.vue';
 
 Vue.use(VueRouter);    // instalamos explícitamente el router
 
@@ -21,6 +22,13 @@ export default new VueRouter({
         {
             path: "/mispelis/:id",
             component: Detalle,
+            props: true,
+
+
+        },
+        {
+            path: "/mispelis/:id/edit",
+            component: Edit,
             props: true,
 
 

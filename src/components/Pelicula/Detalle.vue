@@ -1,7 +1,7 @@
 <template>
   <div>
+    <img src="@/assets/logo.png" alt width="150px" class="rounded-circle" id="avatar" />
     <h1>Detalle de {{name}}</h1>
-    <img src="@/assets/logo.png" alt width="300px" class="rounded-circle" id="avatar" />
 
     <table class="table col -md-6">
       <thead>
